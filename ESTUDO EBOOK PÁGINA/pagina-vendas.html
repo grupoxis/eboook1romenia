@@ -1,0 +1,488 @@
+<title>Farmacia Naturală Creștină — Leacuri din vremea Bibliei</title>
+<style>
+  /* ---------- TOKENS ---------- */
+  :root{
+    --ground:#E8E1CE;        /* pergament vechi */
+    --surface:#F2ECDC;       /* carton ridicat */
+    --surface-2:#EEE6D2;
+    --ink:#2A2620;           /* cerneală */
+    --ink-soft:#5B5343;
+    --ink-faint:#867B65;
+    --green:#2F4A3C;         /* verde de mănăstire */
+    --green-deep:#1E3229;
+    --gold:#A9772B;          /* aur de icoană */
+    --gold-soft:#B99043;
+    --oxblood:#7A2E2A;       /* roșu liturgic */
+    --line:rgba(42,38,32,.16);
+    --line-gold:rgba(169,119,43,.38);
+    --shadow:0 18px 44px -24px rgba(30,50,41,.55);
+    --shadow-soft:0 8px 24px -16px rgba(30,50,41,.4);
+    --maxw:680px;
+    --serif:"Palatino Linotype","Book Antiqua",Palatino,"Iowan Old Style",Georgia,"Times New Roman",serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --ground:#141813;--surface:#1D231C;--surface-2:#222A20;--ink:#ECE4D0;--ink-soft:#C3BAA2;--ink-faint:#948B76;
+      --green:#7BA487;--green-deep:#0E140F;--gold:#CBA24E;--gold-soft:#D9B970;--oxblood:#C56A61;
+      --line:rgba(236,228,208,.14);--line-gold:rgba(203,162,78,.4);
+      --shadow:0 20px 48px -26px rgba(0,0,0,.7);--shadow-soft:0 10px 26px -18px rgba(0,0,0,.6);
+    }
+  }
+  :root[data-theme="light"]{
+    --ground:#E8E1CE;--surface:#F2ECDC;--surface-2:#EEE6D2;--ink:#2A2620;--ink-soft:#5B5343;--ink-faint:#867B65;
+    --green:#2F4A3C;--green-deep:#1E3229;--gold:#A9772B;--gold-soft:#B99043;--oxblood:#7A2E2A;
+    --line:rgba(42,38,32,.16);--line-gold:rgba(169,119,43,.38);
+    --shadow:0 18px 44px -24px rgba(30,50,41,.55);--shadow-soft:0 8px 24px -16px rgba(30,50,41,.4);
+  }
+  :root[data-theme="dark"]{
+    --ground:#141813;--surface:#1D231C;--surface-2:#222A20;--ink:#ECE4D0;--ink-soft:#C3BAA2;--ink-faint:#948B76;
+    --green:#7BA487;--green-deep:#0E140F;--gold:#CBA24E;--gold-soft:#D9B970;--oxblood:#C56A61;
+    --line:rgba(236,228,208,.14);--line-gold:rgba(203,162,78,.4);
+    --shadow:0 20px 48px -26px rgba(0,0,0,.7);--shadow-soft:0 10px 26px -18px rgba(0,0,0,.6);
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--ground);color:var(--ink);
+    font-family:var(--sans);font-size:19px;line-height:1.68;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;
+  }
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;
+    background:
+      radial-gradient(circle at 18% 12%,rgba(169,119,43,.06),transparent 40%),
+      radial-gradient(circle at 84% 78%,rgba(47,74,60,.07),transparent 45%);
+  }
+  .wrap{position:relative;z-index:1;max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  section{padding:58px 0}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.16;text-wrap:balance;margin:0}
+  h1{font-size:clamp(2rem,7vw,3rem);letter-spacing:-.01em}
+  h2{font-size:clamp(1.5rem,4.6vw,2.1rem);letter-spacing:-.005em}
+  h3{font-size:1.16rem}
+  p{margin:0}
+  a{color:inherit}
+
+  .eyebrow{
+    font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:.6em;margin-bottom:16px;
+  }
+  .eyebrow::before{content:"";width:26px;height:1px;background:var(--line-gold)}
+  .lead{color:var(--ink-soft);font-size:1.08rem}
+  .stack{display:flex;flex-direction:column;gap:22px}
+  .center{text-align:center;align-items:center}
+
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:.55em;
+    font-family:var(--sans);font-weight:700;font-size:1.06rem;letter-spacing:.01em;
+    padding:17px 30px;border-radius:2px;border:1px solid transparent;cursor:pointer;text-decoration:none;
+    transition:transform .18s ease,box-shadow .18s ease,background .18s ease;box-shadow:var(--shadow-soft);
+  }
+  .btn-primary{background:var(--green);color:#F4EFDF;border-color:var(--green-deep)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+  .btn-gold{background:var(--gold);color:#211a0a}
+  .btn-gold:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+  .btn-lg{padding:20px 40px;font-size:1.14rem}
+  .btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+  .price-tag{font-size:.86em;opacity:.85;font-weight:600}
+
+  .topbar{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--ground) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .topbar .row{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 22px;max-width:var(--maxw);margin:0 auto}
+  .brand{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-size:1.08rem;font-weight:600;line-height:1.05}
+  .brand small{display:block;font-family:var(--sans);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);font-weight:600}
+  .topbar .btn{padding:10px 18px;font-size:.92rem;box-shadow:none}
+  .ico-gold{color:var(--gold)}
+
+  .hero{padding-top:46px}
+  .badges{display:flex;flex-wrap:wrap;gap:10px 18px;justify-content:center;margin-top:6px}
+  .badge{display:inline-flex;align-items:center;gap:.5em;font-size:.86rem;font-weight:600;color:var(--ink-soft)}
+  .micro{font-size:.9rem;color:var(--ink-faint)}
+  .hero-figure{display:flex;justify-content:center;margin-top:6px}
+  .book{width:min(280px,72vw);filter:drop-shadow(0 26px 40px rgba(30,50,41,.45))}
+
+  .rule{display:flex;align-items:center;justify-content:center;gap:16px;color:var(--gold);opacity:.9}
+  .rule::before,.rule::after{content:"";height:1px;width:64px;background:var(--line-gold)}
+  .band{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .band-green{background:var(--green-deep);color:#EDE6D2}
+  .band-green .eyebrow{color:var(--gold-soft)}
+  .band-green .lead{color:#CFC7B2}
+
+  .symptoms{list-style:none;padding:0;margin:6px 0 0;display:flex;flex-direction:column;gap:14px}
+  .symptoms li{display:flex;gap:13px;align-items:flex-start;font-size:1.04rem}
+  .symptoms svg{flex:none;margin-top:3px;color:var(--oxblood)}
+
+  .benefits{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
+  .bcard{background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:22px 20px;box-shadow:var(--shadow-soft)}
+  .bcard .ic{width:34px;height:34px;color:var(--gold);margin-bottom:12px}
+  .bcard h3{margin-bottom:6px}
+  .bcard p{font-size:.98rem;color:var(--ink-soft)}
+
+  .modules{display:flex;flex-direction:column;gap:2px;margin-top:10px;border:1px solid var(--line);border-radius:3px;overflow:hidden}
+  .mrow{display:flex;gap:15px;align-items:flex-start;padding:16px 18px;background:var(--surface);border-bottom:1px solid var(--line)}
+  .mrow:last-child{border-bottom:0}
+  .mrow svg{flex:none;color:var(--green);margin-top:2px}
+  .mrow b{font-family:var(--serif);font-weight:600;font-size:1.08rem}
+  .mrow span{display:block;color:var(--ink-soft);font-size:.94rem}
+  .mrow em{color:var(--gold);font-style:italic;font-size:.86rem}
+
+  .valuebox{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:26px 24px;box-shadow:var(--shadow-soft)}
+  .vrow{display:flex;justify-content:space-between;gap:14px;align-items:baseline;padding:11px 0;border-bottom:1px dashed var(--line)}
+  .vrow span:first-child{color:var(--ink-soft)}
+  .vrow span:last-child{font-variant-numeric:tabular-nums;font-weight:700;white-space:nowrap}
+  .vtotal{display:flex;justify-content:space-between;gap:14px;align-items:baseline;padding-top:15px;margin-top:4px}
+  .vtotal b{font-family:var(--serif);font-size:1.15rem}
+  .vtotal s{color:var(--ink-faint);font-size:1.15rem;font-variant-numeric:tabular-nums}
+
+  .pricecard{background:var(--green-deep);color:#EDE6D2;border-radius:4px;padding:34px 26px;text-align:center;box-shadow:var(--shadow);border:1px solid rgba(169,119,43,.35)}
+  .price-now{font-family:var(--serif);font-size:clamp(2.7rem,12vw,4rem);line-height:1;color:#fff;letter-spacing:-.02em}
+  .price-now .cur{font-size:.36em;font-weight:600;letter-spacing:.03em}
+  .price-lei{color:var(--gold-soft);font-size:1rem;font-weight:600;letter-spacing:.02em}
+  .save-pill{display:inline-block;background:var(--oxblood);color:#F4EFDF;font-family:var(--sans);font-weight:700;font-size:.78rem;letter-spacing:.04em;padding:5px 12px;border-radius:2px}
+  .pricecard .sub{color:#CFC7B2;font-size:1rem;max-width:34ch;margin:0 auto}
+  .secure{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center;color:#BEB6A1;font-size:.85rem;font-weight:600}
+  .secure span{display:inline-flex;align-items:center;gap:.45em}
+  .secure svg{color:var(--gold-soft)}
+
+  .quotes{display:flex;flex-direction:column;gap:16px;margin-top:8px}
+  .quote{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:3px;padding:22px 22px 18px}
+  .stars{color:var(--gold);letter-spacing:.15em;font-size:.95rem}
+  .quote p{font-family:var(--serif);font-size:1.08rem;line-height:1.55;margin:10px 0 12px}
+  .qwho{font-size:.9rem;color:var(--ink-faint);font-weight:600}
+  .reachline{margin-top:22px;text-align:center;font-size:1rem;color:var(--ink-soft)}
+  .reachline b{color:var(--ink)}
+
+  .pullquote{font-family:var(--serif);font-size:clamp(1.35rem,5vw,1.8rem);line-height:1.35;color:var(--green);text-align:center;margin-top:18px;text-wrap:balance}
+  .band-green .pullquote{color:var(--gold-soft)}
+
+  .guarantee{text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .seal{width:74px;height:74px;color:var(--gold)}
+
+  details{border-bottom:1px solid var(--line)}
+  summary{list-style:none;cursor:pointer;padding:18px 2px;display:flex;justify-content:space-between;gap:16px;align-items:center;font-family:var(--serif);font-size:1.1rem;font-weight:600}
+  summary::-webkit-details-marker{display:none}
+  summary .chev{flex:none;transition:transform .2s ease;color:var(--gold)}
+  details[open] summary .chev{transform:rotate(45deg)}
+  details p{padding:0 2px 20px;color:var(--ink-soft);font-size:1rem}
+
+  footer{background:var(--green-deep);color:#C9C0AB;padding:44px 0 34px;border-top:3px solid var(--gold)}
+  footer .wrap{display:flex;flex-direction:column;gap:18px}
+  .fbrand{font-family:var(--serif);color:#EDE6D2;font-size:1.2rem}
+  .flinks{display:flex;gap:22px;flex-wrap:wrap;font-size:.9rem}
+  .flinks a{color:#C9C0AB;text-decoration:none}
+  .flinks a:hover{color:var(--gold-soft)}
+  .disclaimer{font-size:.78rem;line-height:1.6;color:#9A917C;border-top:1px solid rgba(236,228,208,.12);padding-top:16px}
+  .copy{font-size:.8rem;color:#8B8370}
+
+  .stickybar{
+    position:fixed;left:0;right:0;bottom:0;z-index:50;transform:translateY(120%);
+    transition:transform .3s ease;background:color-mix(in srgb,var(--ground) 94%,transparent);
+    backdrop-filter:blur(10px);border-top:1px solid var(--line-gold);padding:11px 16px;
+    display:flex;gap:12px;align-items:center;justify-content:space-between;box-shadow:0 -8px 26px -18px rgba(0,0,0,.5);
+  }
+  .stickybar.show{transform:translateY(0)}
+  .stickybar .lbl{font-family:var(--serif);font-weight:600;font-size:1rem}
+  .stickybar .lbl small{display:block;font-family:var(--sans);font-size:.72rem;color:var(--ink-faint);font-weight:600}
+  .stickybar .btn{padding:13px 22px;box-shadow:none}
+
+  html.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+  html.js .reveal.vis{opacity:1;transform:none}
+
+  @media (max-width:560px){
+    body{font-size:18px}
+    .benefits{grid-template-columns:1fr}
+    section{padding:46px 0}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    html.js .reveal{opacity:1;transform:none;transition:none}
+    .btn,.stickybar{transition:none}
+  }
+</style>
+
+<!-- ===================== TOP BAR ===================== -->
+<div class="topbar">
+  <div class="row">
+    <div class="brand">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="ico-gold" aria-hidden="true">
+        <path d="M12 2v20M6 8h12M8 5h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M12 14c-2.6 0-4.5 2.2-4.5 5.5C10 19.5 12 18 12 14zM12 14c2.6 0 4.5 2.2 4.5 5.5C14 19.5 12 18 12 14z" fill="currentColor" opacity=".85"/>
+      </svg>
+      <span>Farmacia Naturală Creștină<small>Descoperă&nbsp;Biblia</small></span>
+    </div>
+    <a class="btn btn-primary" href="#pret">Vreau cartea</a>
+  </div>
+</div>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="wrap stack center reveal">
+    <span class="eyebrow">Leacuri din vremea Bibliei</span>
+    <h1>Plantele de leac pomenite în Sfânta Scriptură — acum, în casa ta.</h1>
+    <p class="lead">30 de rețete naturale, simple și ieftine, făcute din plantele pe care le foloseau oamenii lui Dumnezeu — de la untdelemn și smirnă până la isop și smochine. Explicate pas cu pas, pentru sănătatea trupului și liniștea sufletului.</p>
+    <div class="hero-figure">
+      <svg class="book" viewBox="0 0 260 340" role="img" aria-label="Coperta cărții Farmacia Naturală Creștină">
+        <defs>
+          <linearGradient id="cov" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#33513F"/><stop offset="1" stop-color="#1C3025"/>
+          </linearGradient>
+        </defs>
+        <rect x="10" y="8" width="240" height="324" rx="4" fill="url(#cov)"/>
+        <rect x="10" y="8" width="14" height="324" rx="3" fill="#16261D" opacity=".85"/>
+        <rect x="22" y="20" width="216" height="300" rx="2" fill="none" stroke="#B99043" stroke-width="1.4" opacity=".9"/>
+        <g transform="translate(130,116)" stroke="#C6A45B" stroke-width="2.2" fill="none" stroke-linecap="round">
+          <path d="M0-32V32M-14-20H14M-10-9H10"/>
+          <path d="M0 32c-13-3-21-13-21-28 11 2 19 11 21 28z" fill="#C6A45B" opacity=".55" stroke="none"/>
+          <path d="M0 32c13-3 21-13 21-28-11 2-19 11-21 28z" fill="#C6A45B" opacity=".55" stroke="none"/>
+        </g>
+        <text x="130" y="206" text-anchor="middle" font-family="Palatino Linotype,Georgia,serif" font-size="24" fill="#F1E9D2" font-style="italic">Farmacia</text>
+        <text x="130" y="232" text-anchor="middle" font-family="Palatino Linotype,Georgia,serif" font-size="18" fill="#F1E9D2">NATURALĂ CREȘTINĂ</text>
+        <line x1="82" y1="250" x2="178" y2="250" stroke="#B99043" stroke-width="1"/>
+        <text x="130" y="274" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="10" letter-spacing="2" fill="#C6A45B">LEACURI DIN VREMEA BIBLIEI</text>
+      </svg>
+    </div>
+    <a class="btn btn-primary btn-lg" href="#pret">Da — vreau leacurile din Biblie</a>
+    <p class="micro">Descărcare instantă (PDF) · Garanție 7 zile, banii înapoi</p>
+    <div class="badges">
+      <span class="badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="ico-gold" aria-hidden="true"><path d="M12 21c5-3 8-7 8-12a8 8 0 0 0-8-4 8 8 0 0 0-8 4c0 5 3 9 8 12z" stroke="currentColor" stroke-width="1.5"/><path d="M12 5v16" stroke="currentColor" stroke-width="1.5"/></svg>30 de rețete</span>
+      <span class="badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="ico-gold" aria-hidden="true"><path d="M6 3h9l4 4v14H6z" stroke="currentColor" stroke-width="1.5"/><path d="M9 9h7M9 13h7M9 17h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Din Sfânta Scriptură</span>
+      <span class="badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="ico-gold" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 10-13h-8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>Acces imediat</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROBLEM ===================== -->
+<section class="band">
+  <div class="wrap stack reveal">
+    <span class="eyebrow">Adevărul incomod</span>
+    <h2>Am umplut dulapul de medicamente și am uitat leacurile pe care le știa lumea Bibliei.</h2>
+    <p class="lead">Încă din vremea Scripturii, oamenii lui Dumnezeu se îngrijeau cu ce dăduse El pe pământ: untdelemn pentru răni, smochine pentru bube, isop pentru curățire, plante de leac pentru fiecare nevoie. Astăzi am uitat aproape totul — și trăim cu:</p>
+    <ul class="symptoms">
+      <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8 12h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Tensiune și inimă care nu-ți dau pace</li>
+      <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8 12h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Digestie grea, balonare și un ficat leneș</li>
+      <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8 12h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Dureri de articulații, de genunchi și de spate</li>
+      <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8 12h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Somn agitat, nervi și neliniște</li>
+      <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8 12h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Răceli dese și lipsă de putere</li>
+      <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8 12h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Oboseală care nu trece, oricât te-ai odihni</li>
+    </ul>
+  </div>
+</section>
+
+<div class="wrap"><div class="rule reveal"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2v20M6 8h12M8 5h8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div></div>
+
+<!-- ===================== SOLUTION ===================== -->
+<section>
+  <div class="wrap stack reveal">
+    <span class="eyebrow">Vindecarea din natură</span>
+    <h2>Farmacia Naturală Creștină — leacuri din plantele Bibliei, făcute în bucătăria ta.</h2>
+    <p class="lead">Fiecare rețetă pornește de la o plantă pomenită în Scriptură și de la povestea ei — apoi îți arată, pas cu pas, cum s-o pregătești acasă, cu lucruri ieftine, de la orice piață.</p>
+    <div class="benefits">
+      <div class="bcard">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 3h9l4 4v14H6z" stroke="currentColor" stroke-width="1.5"/><path d="M9 11h7M9 15h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <h3>Rădăcini în Scriptură</h3>
+        <p>Fiecare leac vine cu versetul și povestea lui din Biblie.</p>
+      </div>
+      <div class="bcard">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3c4 3 6 6 6 9a6 6 0 1 1-12 0c0-3 2-6 6-9z" stroke="currentColor" stroke-width="1.5"/><path d="M12 8v9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <h3>Rețete simple</h3>
+        <p>Ingrediente ieftine, găsite oriunde — fără lucruri complicate.</p>
+      </div>
+      <div class="bcard">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="13" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M12 9v4l3 2M9 2h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <h3>Gata în câteva minute</h3>
+        <p>Ceaiuri, untdelemnuri, alifii și siropuri, explicate pas cu pas.</p>
+      </div>
+      <div class="bcard">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 20s-7-4.3-7-9.5A3.8 3.8 0 0 1 12 8a3.8 3.8 0 0 1 7 2.5C19 15.7 12 20 12 20z" stroke="currentColor" stroke-width="1.5"/></svg>
+        <h3>Pentru trup și suflet</h3>
+        <p>Leacul și rugăciunea, așezate împreună, ca în vremea Bibliei.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHAT'S INSIDE ===================== -->
+<section class="band">
+  <div class="wrap stack reveal">
+    <span class="eyebrow">Ce vei găsi în carte</span>
+    <h2>30 de leacuri din vremea Bibliei</h2>
+    <p class="lead">Fiecare rețetă are versetul din Scriptură, povestea din spate, prepararea pas cu pas și cât să folosești. Iată câteva dintre plantele pomenite în Biblie pe care le vei descoperi:</p>
+    <div class="modules">
+      <div class="mrow"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3c4 3 6 6 6 9a6 6 0 1 1-12 0c0-3 2-6 6-9z" stroke="currentColor" stroke-width="1.5"/></svg><div><b>Untdelemnul de măsline</b> <em>Luca 10:34</em><span>Pentru piele, răni și inimă — untdelemnul cu care se ungeau bolnavii.</span></div></div>
+      <div class="mrow"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l2 5 5 .5-4 3.5 1 5-4-2.5-4 2.5 1-5-4-3.5 5-.5z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg><div><b>Smirna și aloea</b> <em>Ioan 19:39</em><span>Pentru răni și îngrijirea pielii — mirodeniile din vechime.</span></div></div>
+      <div class="mrow"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21c5-3 8-7 8-12a8 8 0 0 0-16 0c0 5 3 9 8 12z" stroke="currentColor" stroke-width="1.5"/></svg><div><b>Isopul</b> <em>Psalmul 51:7</em><span>Pentru curățire și respirație — planta curățirii.</span></div></div>
+      <div class="mrow"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.5"/></svg><div><b>Smochinele</b> <em>Isaia 38:21</em><span>Cataplasma cu care s-a vindecat regele Iezechia.</span></div></div>
+      <div class="mrow"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3c4 3 6 6 6 9a6 6 0 1 1-12 0c0-3 2-6 6-9z" stroke="currentColor" stroke-width="1.5"/></svg><div><b>Menta, mărarul și chimenul</b> <em>Matei 23:23</em><span>Pentru digestie, balonare și stomac greu.</span></div></div>
+      <div class="mrow"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 10-13h-8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg><div><b>Muștarul</b> <em>Matei 13:31</em><span>Pentru circulație și dureri — sămânța din pildă.</span></div></div>
+      <div class="mrow"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M12 8v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><div><b>Mierea</b> <em>Proverbe 24:13</em><span>Pentru gât, tuse și putere.</span></div></div>
+      <div class="mrow"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 20s-7-4.3-7-9.5A3.8 3.8 0 0 1 12 8a3.8 3.8 0 0 1 7 2.5C19 15.7 12 20 12 20z" stroke="currentColor" stroke-width="1.5"/></svg><div><b>Vinul, cu măsură</b> <em>1 Timotei 5:23</em><span>„Pentru stomacul tău” — cum îl folosea Sfântul Pavel.</span></div></div>
+      <div class="mrow"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 10-13h-8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg><div><b>Rodia și curmalele</b> <em>Psalmul 92:12</em><span>Pentru inimă, putere și energie.</span></div></div>
+    </div>
+    <p class="micro" style="text-align:center">…și încă peste 20 de leacuri din Scriptură.</p>
+  </div>
+</section>
+
+<!-- ===================== VALUE + PRICE ===================== -->
+<section id="pret">
+  <div class="wrap stack reveal">
+    <span class="eyebrow" style="align-self:center">Tot ce primești</span>
+    <div class="valuebox">
+      <div class="vrow"><span>Ghidul principal — 30 de leacuri din Biblie</span><span>149&nbsp;lei</span></div>
+      <div class="vrow"><span>Ghid de preparare, pas cu pas</span><span>49&nbsp;lei</span></div>
+      <div class="vrow"><span>Harta plantelor din Scriptură + versete</span><span>29&nbsp;lei</span></div>
+      <div class="vrow"><span>Dar: „Rugăciune și leac”</span><span>19&nbsp;lei</span></div>
+      <div class="vtotal"><b>Valoare totală</b><s>246&nbsp;lei</s></div>
+    </div>
+
+    <div class="pricecard">
+      <div class="stack center" style="gap:14px">
+        <span class="save-pill">Ofertă de lansare — 90% reducere</span>
+        <div class="price-now">24,99&nbsp;<span class="cur">lei</span></div>
+        <div class="price-lei">≈ 5&nbsp;€ · o singură plată, pentru totdeauna</div>
+        <p class="sub">Mai puțin decât o cutie de medicamente de la farmacie.</p>
+        <a class="btn btn-gold btn-lg" href="#" onclick="return false" aria-label="Cumpără cartea">Da, vreau leacurile acum <span class="price-tag">→</span></a>
+        <div class="secure">
+          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="1.6"/></svg>Plată securizată</span>
+          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 10-13h-8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>Livrare instantă PDF</span>
+          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12a8 8 0 1 1 3 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M7 14v4H3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Fără abonament</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TESTIMONIALS ===================== -->
+<!-- ATENȚIE: textele de mai jos sunt EXEMPLE. Înlocuiește-le cu testimoniale REALE și cu acordul persoanelor înainte de publicare (recenziile inventate sunt ilegale în UE). -->
+<section class="band">
+  <div class="wrap stack reveal">
+    <span class="eyebrow">Ce spun cititorii</span>
+    <h2>Oameni ca tine, rezultate adevărate</h2>
+    <div class="quotes">
+      <div class="quote">
+        <div class="stars" aria-label="cinci stele">★★★★★</div>
+        <p>„Mi-a plăcut că fiecare leac are versetul lui din Biblie. Ceaiul pentru digestie chiar m-a ajutat.”</p>
+        <div class="qwho">Ion M. · Cluj</div>
+      </div>
+      <div class="quote">
+        <div class="stars" aria-label="cinci stele">★★★★★</div>
+        <p>„De ani de zile nu mai dormeam bine. Ceaiul de seară mi-a adus liniștea înapoi.”</p>
+        <div class="qwho">Maria P. · Iași</div>
+      </div>
+      <div class="quote">
+        <div class="stars" aria-label="cinci stele">★★★★★</div>
+        <p>„Untdelemnul cu plante pentru piele e minunat. Simplu, ieftin și din Scriptură.”</p>
+        <div class="qwho">Vasile T. · Constanța</div>
+      </div>
+    </div>
+    <p class="reachline">Poveștile și rețetele noastre sunt urmărite de <b>sute de mii de oameni</b> pe pagina <b>Descoperă Biblia</b>.</p>
+  </div>
+</section>
+
+<!-- ===================== ABOUT / SCRIPTURE ===================== -->
+<section class="band-green">
+  <div class="wrap stack reveal">
+    <span class="eyebrow">De unde vin aceste leacuri</span>
+    <h2>De la Facere până la Evanghelii, Scriptura este plină de plante de leac.</h2>
+    <p class="lead">Untdelemnul, smirna, isopul, smochinele, mierea, menta — zeci de plante sunt pomenite în Biblie pentru vindecare și îngrijire. Am adunat cele mai de folos, am însemnat versetul fiecăreia și le-am așezat pas cu pas, pentru omul de azi.</p>
+    <p class="pullquote">„Dumnezeu a pus leacul în natură. Noi doar l-am uitat.”</p>
+  </div>
+</section>
+
+<!-- ===================== GUARANTEE ===================== -->
+<section>
+  <div class="wrap reveal">
+    <div class="guarantee">
+      <svg class="seal" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l7 3v6c0 5-3 8-7 11-4-3-7-6-7-11V5z" stroke="currentColor" stroke-width="1.4"/><path d="M8.5 12l2.5 2.5 4.5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <h2>Garanție 7 zile, fără întrebări</h2>
+      <p class="lead" style="max-width:46ch">Încearcă rețetele timp de 7 zile. Dacă nu ești mulțumit, îți returnăm toți banii — fără condiții și fără explicații.</p>
+      <p style="font-family:var(--serif);font-size:1.2rem;color:var(--green)">Nu ai nimic de pierdut. Sănătatea ta are totul de câștigat.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="band">
+  <div class="wrap stack reveal">
+    <span class="eyebrow">Întrebări firești</span>
+    <h2>Ce te-ai putea întreba</h2>
+    <div>
+      <details open>
+        <summary>Chiar funcționează?<svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></summary>
+        <p>Sunt plante folosite de mii de ani, pomenite chiar în Biblie. Le folosești cu măsură și bun-simț, alături de sfatul medicului — nu sunt minuni, ci înțelepciune veche pusă la lucru.</p>
+      </details>
+      <details>
+        <summary>E sigur să le folosesc?<svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></summary>
+        <p>Fiecare rețetă vine cu doza potrivită și cu mențiuni despre când să NU o folosești. Dacă urmezi un tratament, ești însărcinată sau ai o boală cronică, întreabă întâi medicul.</p>
+      </details>
+      <details>
+        <summary>Sunt greu de făcut?<svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></summary>
+        <p>Nu. Majoritatea se fac în bucătărie, în câteva minute, cu explicații pas cu pas. Dacă știi să faci un ceai, te descurci.</p>
+      </details>
+      <details>
+        <summary>Cât costă ingredientele?<svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></summary>
+        <p>Puțin. Sunt plante și lucruri obișnuite — untdelemn, miere, mentă, smochine — pe care le găsești la piață sau la plafar.</p>
+      </details>
+      <details>
+        <summary>Cum primesc cartea?<svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></summary>
+        <p>Imediat după plată, primești cartea în format PDF, pe care o poți citi pe telefon, pe tabletă sau la calculator. Este a ta pentru totdeauna.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FINAL CTA ===================== -->
+<section>
+  <div class="wrap stack center reveal">
+    <span class="eyebrow">Ultimul pas</span>
+    <h2>Sănătatea ta nu poate aștepta.</h2>
+    <p class="lead" style="max-width:44ch">Fiecare zi cu aceleași dureri este o zi pierdută. Redescoperă leacurile pe care le știa lumea Bibliei.</p>
+    <a class="btn btn-primary btn-lg" href="#pret">Vreau cartea — 24,99&nbsp;lei</a>
+    <div class="secure" style="color:var(--ink-faint)">
+      <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="ico-gold" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="1.6"/></svg>Plată securizată</span>
+      <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="ico-gold" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 10-13h-8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>Descărcare instantă</span>
+      <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="ico-gold" aria-hidden="true"><path d="M12 2l7 3v6c0 5-3 8-7 11-4-3-7-6-7-11V5z" stroke="currentColor" stroke-width="1.6"/></svg>Garanție 7 zile</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="wrap">
+    <div class="fbrand">Farmacia Naturală Creștină</div>
+    <div class="flinks">
+      <a href="#">Politica de confidențialitate</a>
+      <a href="#">Termeni și condiții</a>
+      <a href="#">Contact</a>
+    </div>
+    <p class="disclaimer">Această carte are scop educativ, cultural și de credință. Rețetele fac parte din tradiția biblică și populară și NU înlocuiesc consultul, diagnosticul sau tratamentul medical. Consultați întotdeauna un medic înainte de a folosi orice remediu, mai ales dacă urmați un tratament, sunteți însărcinată sau aveți o afecțiune cronică. Rezultatele pot varia de la o persoană la alta.</p>
+    <p class="copy">© 2026 Descoperă Biblia · Toate drepturile rezervate.</p>
+  </div>
+</footer>
+
+<!-- ===================== STICKY MOBILE CTA ===================== -->
+<div class="stickybar" id="sticky" aria-hidden="true">
+  <div class="lbl">24,99&nbsp;lei <small>≈ 5 € · pentru totdeauna</small></div>
+  <a class="btn btn-gold" href="#pret">Vreau cartea</a>
+</div>
+
+<script>
+  document.documentElement.classList.add('js');
+  var reduce = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  if(!reduce && 'IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('vis'); io.unobserve(e.target); } });
+    },{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('vis'); });
+  }
+  var sticky = document.getElementById('sticky');
+  var pret = document.getElementById('pret');
+  window.addEventListener('scroll', function(){
+    var show = window.scrollY > 560;
+    var r = pret.getBoundingClientRect();
+    var onPrice = r.top < window.innerHeight && r.bottom > 0;
+    if(show && !onPrice){ sticky.classList.add('show'); sticky.setAttribute('aria-hidden','false'); }
+    else { sticky.classList.remove('show'); sticky.setAttribute('aria-hidden','true'); }
+  }, {passive:true});
+</script>
