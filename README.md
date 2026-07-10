@@ -5,7 +5,7 @@ Página de vendas (em **romeno**) do ebook **"Farmacia Naturală Creștină — 
 ## Deploy
 - Site estático de um arquivo: **`index.html`** (na raiz) é a página que a Vercel serve.
 - Sem build. Basta importar o repositório na Vercel → deploy automático.
-- Preço do produto: **24,99 lei** (≈ 5 €). Checkout via Hotmart (trocar o link do botão de compra).
+- Preço do produto: **7 €**. Checkout via Hotmart (trocar o link do botão de compra). Entrega do ebook: **somente via Hotmart** (PDF) — a página `/carte` fica fora do deploy (ver `.vercelignore`).
 
 ## Estrutura
 - `index.html` — página final (documento completo, com charset; abre direto no navegador).

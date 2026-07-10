@@ -1,6 +1,6 @@
 # 05 — Descrição do Produto para a Hotmart (romeno)
 
-> Copie e cole nos campos da Hotmart. Preço: **24,99 lei** (≈5€). Produto: carte digitală (PDF).
+> Copie e cole nos campos da Hotmart. Preço: **7€** (euro). Produto: carte digitală (PDF).
 
 ---
 
@@ -66,5 +66,5 @@ Carte digitală în format PDF. O primești imediat după plată și o poți cit
 - **Categoria:** Saúde / Espiritualidade (ou "Religião e Espiritualidade").
 - **Palavras-chave / tags:** `leacuri naturale`, `remedii din Biblie`, `plante de leac`, `sănătate naturală`, `credință`, `Biblia`, `leacuri bătrânești`, `carte creștină`.
 - **Idioma do produto:** Romeno.
-- **Moeda de venda:** RON (lei) como principal; a Hotmart converte automaticamente para outros compradores.
+- **Moeda de venda:** EUR (euro), 7€; a Hotmart converte automaticamente para lei no checkout do comprador romeno.
 - **Garantia:** ativar 7 dias (bate com a página).

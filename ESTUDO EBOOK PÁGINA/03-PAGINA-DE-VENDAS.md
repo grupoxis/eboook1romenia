@@ -1,6 +1,6 @@
 # 03 — Página de Vendas: "Farmacia Naturală Creștină"
 
-> **✅ JÁ IMPLEMENTADA.** A página real e final está em **`pagina-vendas.html`** (preview do Claude) e **`../index.html`** (documento completo p/ abrir no navegador e deploy na Vercel). Conceito: *30 leacuri din vremea Bibliei*. Preço: **24,99 lei (≈5€)**. Este documento é a especificação/estrutura de referência.
+> **✅ JÁ IMPLEMENTADA.** A página real e final está em **`pagina-vendas.html`** (preview do Claude) e **`../index.html`** (documento completo p/ abrir no navegador e deploy na Vercel). Conceito: *30 leacuri din vremea Bibliei*. Preço: **7€**. Entrega: **somente via Hotmart** (PDF); a página online `/carte` está fora do deploy público. Este documento é a especificação/estrutura de referência.
 
 > Estrutura de 14 seções (baseada no template `..\estrutura-pagina-vendas.md`), **preenchida para este produto**. Cada seção traz: função + exemplo de copy **em romeno** pronto para usar/ajustar. Público mais velho e mobile → fonte grande, botões grandes, uma coluna, carregamento rápido.
 

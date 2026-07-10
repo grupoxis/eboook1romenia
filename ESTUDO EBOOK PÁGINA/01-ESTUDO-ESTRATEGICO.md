@@ -1,11 +1,11 @@
 # 01 — Estudo Estratégico: Público & Produto
 
-### Página: "Descoperă Biblia" (Facebook) · Público: Romênia · Objetivo: vender ebook de ~24,99 lei (≈5€)
+### Página: "Descoperă Biblia" (Facebook) · Público: Romênia · Objetivo: vender ebook de ~7€
 
 > **⚠️ ATUALIZAÇÃO (decisões mais recentes) — prevalecem sobre o texto abaixo:**
 > - **Produto/título:** **"Farmacia Naturală Creștină"** (PT: Farmácia Natural Cristã).
 > - **Ângulo:** **~30 receitas naturais da ÉPOCA BÍBLICA** — plantas de leac citadas na Escritura (untdelemn, smirnă, isop, smochine, mentă...), cada uma com o versículo. Isso é ainda **mais congruente** com a página "Descoperă Biblia" do que o ângulo de mosteiro, porque liga o remédio direto à Bíblia que o público já consome.
-> - **Preço:** **24,99 lei** (charm price, ≈5€) — moeda local (lei) para o público romeno, com selo "Ofertă de lansare".
+> - **Preço:** **7€** (euro), com selo "Ofertă de lansare". A Hotmart converte para lei no checkout do comprador romeno (~35 lei).
 > - As referências abaixo a "Leacuri Mănăstirești / Farmacia lui Dumnezeu / 7€" continuam válidas como **prova de mercado** (o gênero e a religiosidade sustentam a decisão), mas o produto final é o acima.
 
 ---

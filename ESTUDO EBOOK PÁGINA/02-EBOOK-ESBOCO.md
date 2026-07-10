@@ -121,7 +121,7 @@ Agrupadas por benefício. Cada uma no formato: **nume + verset biblic → povest
 - **Formato:** PDF (download instantâneo via Hotmart). Opcional EPUB.
 - **Diagramação p/ leitor mais velho:** fonte grande (≥12–13pt), bom contraste, 1 receita por página, ícone por tipo de preparo, imagem da planta + referência do versículo em destaque.
 - **Idioma:** romeno nativo revisado; **usar diacríticos corretos** (ă, â, î, ș, ț) e nomes bíblicos na forma ortodoxa romena (ex.: "Iisus", "Facere", "Ieremia").
-- **Preço de venda:** **24,99 lei** (≈ 5€) — ver `03-PAGINA-DE-VENDAS.md`.
+- **Preço de venda:** **7€** — ver `03-PAGINA-DE-VENDAS.md`.
 - **Capa:** estética "manuscrito sagrado" (pergaminho, cruz + ramo de erva, ouro de ícone).
 
 ---
