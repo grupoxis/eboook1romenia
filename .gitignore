@@ -8,3 +8,6 @@ Desktop.ini
 
 # Vercel
 .vercel/
+
+# Produto pago (PDF) — não versionar/publicar; enviar direto na Hotmart
+*.pdf

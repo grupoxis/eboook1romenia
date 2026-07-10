@@ -1,0 +1,736 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Farmacia Naturală Creștină — 30 de leacuri din vremea Bibliei</title>
+<meta name="description" content="Cartea online: 30 de leacuri naturale din vremea Bibliei, cu versetul, povestea și rețeta fiecăreia.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BF%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --ground:#ECE5D3;--surface:#F5EFE0;--ink:#2A2620;--ink-soft:#574F41;--ink-faint:#867B65;
+    --green:#2F4A3C;--green-deep:#1E3229;--gold:#A9772B;--gold-soft:#B99043;--oxblood:#7A2E2A;
+    --line:rgba(42,38,32,.16);--line-gold:rgba(169,119,43,.4);
+    --serif:"Palatino Linotype","Book Antiqua",Palatino,"Iowan Old Style",Georgia,"Times New Roman",serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --maxw:680px;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{--ground:#15190F;--surface:#1E2419;--ink:#ECE4D0;--ink-soft:#C3BAA2;--ink-faint:#948B76;
+      --green:#84AC8C;--green-deep:#0E140F;--gold:#CBA24E;--gold-soft:#D9B970;--oxblood:#C56A61;
+      --line:rgba(236,228,208,.14);--line-gold:rgba(203,162,78,.42);}
+  }
+  :root[data-theme="light"]{--ground:#ECE5D3;--surface:#F5EFE0;--ink:#2A2620;--ink-soft:#574F41;--ink-faint:#867B65;--green:#2F4A3C;--green-deep:#1E3229;--gold:#A9772B;--gold-soft:#B99043;--oxblood:#7A2E2A;--line:rgba(42,38,32,.16);--line-gold:rgba(169,119,43,.4);}
+  :root[data-theme="dark"]{--ground:#15190F;--surface:#1E2419;--ink:#ECE4D0;--ink-soft:#C3BAA2;--ink-faint:#948B76;--green:#84AC8C;--green-deep:#0E140F;--gold:#CBA24E;--gold-soft:#D9B970;--oxblood:#C56A61;--line:rgba(236,228,208,.14);--line-gold:rgba(203,162,78,.42);}
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);font-size:19px;line-height:1.72;-webkit-font-smoothing:antialiased}
+  .prog{position:fixed;top:0;left:0;height:3px;background:var(--gold);width:0;z-index:60}
+  .topbar{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--ground) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .topbar .row{max-width:var(--maxw);margin:0 auto;padding:11px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .tb-title{font-family:var(--serif);font-weight:600;font-size:1rem;display:flex;align-items:center;gap:9px;line-height:1.1}
+  .tb-title svg{color:var(--gold);flex:none}
+  .tb-title span{display:block}
+  .tb-link{font-family:var(--sans);font-size:.82rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);text-decoration:none;white-space:nowrap}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+
+  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.18;text-wrap:balance}
+  a{color:var(--green)}
+  .eyebrow{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+
+  /* cover */
+  .cover{text-align:center;padding:64px 0 40px;border-bottom:1px solid var(--line)}
+  .cover .cross{color:var(--gold);margin-bottom:20px}
+  .cover h1{font-size:clamp(2.1rem,7vw,3rem);margin:.2em 0 .3em}
+  .cover .sub{color:var(--ink-soft);font-size:1.1rem;max-width:34ch;margin:0 auto;font-style:italic;font-family:var(--serif)}
+  .cover .author{margin-top:22px;font-family:var(--serif);font-size:1.08rem;color:var(--ink)}
+  .cover .author b{color:var(--green)}
+  .cover .brand{margin-top:22px;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);font-weight:700}
+  .signature{font-family:var(--serif);font-size:1.35rem;color:var(--green);margin-top:.4em}
+
+  section{padding:40px 0;border-bottom:1px solid var(--line)}
+  section h2{font-size:clamp(1.5rem,4.6vw,2rem);margin:0 0 .5em}
+  p{margin:0 0 1em}
+  .lead{color:var(--ink-soft)}
+
+  /* TOC */
+  .toc{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:24px 22px;margin-top:22px}
+  .toc h3{margin:0 0 .4em;font-size:1.15rem}
+  .toc .grp{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin:16px 0 6px}
+  .toc ol{margin:0;padding-left:1.4em;display:flex;flex-direction:column;gap:5px}
+  .toc a{text-decoration:none;color:var(--ink)}
+  .toc a:hover{color:var(--green);text-decoration:underline}
+
+  /* methods legend */
+  .legend{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+  .legend div{background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:14px 16px}
+  .legend b{font-family:var(--serif)}
+  .legend p{margin:.2em 0 0;font-size:.94rem;color:var(--ink-soft)}
+
+  /* disclaimer box */
+  .warn{background:color-mix(in srgb,var(--oxblood) 12%,var(--surface));border:1px solid color-mix(in srgb,var(--oxblood) 40%,var(--line));border-left:4px solid var(--oxblood);border-radius:3px;padding:18px 20px;font-size:.96rem}
+  .warn b{color:var(--oxblood)}
+
+  /* recipe */
+  .leac{padding:34px 0;border-bottom:1px solid var(--line)}
+  .leac .num{font-family:var(--serif);font-size:.9rem;color:var(--gold);font-weight:700;letter-spacing:.08em}
+  .leac h2{font-size:clamp(1.4rem,4.4vw,1.8rem);margin:.15em 0 .1em}
+  .leac .verset{font-family:var(--serif);font-style:italic;color:var(--green);font-size:1rem;margin-bottom:1em}
+  .leac h4{font-family:var(--sans);font-size:.74rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin:1.1em 0 .3em;display:flex;align-items:center;gap:.5em}
+  .leac ul{margin:.2em 0 0;padding-left:1.3em}
+  .leac ul li{margin-bottom:.25em}
+  .leac .atentie{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--oxblood);border-radius:3px;padding:12px 15px;font-size:.94rem;color:var(--ink-soft);margin-top:1.1em}
+  .leac .atentie b{color:var(--oxblood)}
+  .grp-head{padding:30px 0 0;text-align:center}
+  .grp-head .rule{display:flex;align-items:center;justify-content:center;gap:14px;color:var(--gold);margin-bottom:6px}
+  .grp-head .rule::before,.grp-head .rule::after{content:"";height:1px;width:48px;background:var(--line-gold)}
+  .grp-head h3{font-size:1.4rem;margin:.1em 0}
+  .grp-head .eyebrow{display:block;margin-bottom:6px}
+
+  .totop{position:fixed;right:18px;bottom:18px;z-index:40;background:var(--green);color:#F4EFDF;border:none;width:46px;height:46px;border-radius:50%;cursor:pointer;box-shadow:0 8px 20px -10px rgba(0,0,0,.5);opacity:0;pointer-events:none;transition:opacity .25s}
+  .totop.show{opacity:1;pointer-events:auto}
+  .btn{display:inline-flex;align-items:center;gap:.5em;font-family:var(--sans);font-weight:700;background:var(--gold);color:#211a0a;border:none;border-radius:2px;padding:11px 20px;cursor:pointer;text-decoration:none;font-size:.95rem}
+
+  footer{padding:40px 0 60px;color:var(--ink-faint);font-size:.82rem;line-height:1.6}
+  footer .fbrand{font-family:var(--serif);color:var(--ink);font-size:1.1rem;margin-bottom:.6em}
+
+  @media (max-width:560px){ body{font-size:18px} .legend{grid-template-columns:1fr} }
+  @media print{
+    .topbar,.totop,.prog,.no-print{display:none}
+    body{background:#fff;color:#000;font-size:12pt}
+    .leac,section{page-break-inside:avoid}
+    .grp-head,.leac h2{page-break-after:avoid}
+    .cover{min-height:96vh;display:flex;flex-direction:column;justify-content:center;page-break-after:always;border:none}
+  }
+</style>
+</head>
+<body>
+<div class="prog" id="prog"></div>
+
+<div class="topbar">
+  <div class="row">
+    <div class="tb-title">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2v20M6 8h12M8 5h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <span>Farmacia Naturală Creștină</span>
+    </div>
+    <a class="tb-link" href="#cuprins">Cuprins</a>
+  </div>
+</div>
+
+<!-- COVER -->
+<div class="wrap">
+  <div class="cover">
+    <svg class="cross" width="52" height="52" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M12 2v20M6 8h12M8 5h8" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+      <path d="M12 15c-2.4 0-4.2 2-4.2 5.2C9.8 20 12 18.6 12 15zM12 15c2.4 0 4.2 2 4.2 5.2C14.2 20 12 18.6 12 15z" fill="currentColor" opacity=".7"/>
+    </svg>
+    <div class="eyebrow">Leacuri din vremea Bibliei</div>
+    <h1>Farmacia Naturală Creștină</h1>
+    <p class="sub">30 de leacuri naturale din Sfânta Scriptură — plantele de leac pe care le foloseau oamenii lui Dumnezeu</p>
+    <div class="author">de <b>Italo Marques Fabris</b></div>
+    <div class="brand">Descoperă Biblia</div>
+  </div>
+</div>
+
+<!-- PREFACE -->
+<div class="wrap">
+  <section id="prefata">
+    <div class="eyebrow">Cuvânt înainte</div>
+    <h2>Farmacia lăsată de Dumnezeu</h2>
+    <p>De la Facere până la Evanghelii, Sfânta Scriptură este plină de plante de leac. Untdelemnul care alina rănile, smirna adusă de magi, isopul curățirii, smochinele cu care s-a vindecat un rege, mierea, menta, rodia — toate sunt daruri din grădina lui Dumnezeu.</p>
+    <p>Vreme de mii de ani, oamenii credinței s-au îngrijit cu ceea ce a lăsat El pe pământ. În paginile care urmează am adunat 30 dintre aceste leacuri, fiecare cu versetul lui, cu povestea din spate și cu rețeta limpede, pas cu pas. Nu sunt minuni, ci înțelepciune veche, pusă din nou la lucru — pentru sănătatea trupului și liniștea sufletului.</p>
+    <p class="lead">Citește pe îndelete, deschide cartea la nevoia ta și folosește leacurile cu credință și cu bun-simț.</p>
+  </section>
+
+  <!-- DISCLAIMER -->
+  <section id="avertisment">
+    <div class="warn">
+      <p><b>⚠️ Important, citește întâi.</b> Această carte are scop educativ, cultural și de credință. Rețetele fac parte din tradiția biblică și populară și <b>NU înlocuiesc</b> consultul, diagnosticul sau tratamentul medical. Consultă întotdeauna un medic înainte de a folosi orice remediu — mai ales dacă urmezi un tratament, ești însărcinată, alăptezi, ai o boală cronică sau dai leacuri copiilor. La primul semn de alergie sau reacție neplăcută, oprește-te. Plantele sunt bune, dar puterea lor cere măsură.</p>
+    </div>
+  </section>
+
+  <!-- METHODS -->
+  <section id="metode">
+    <div class="eyebrow">Înainte de rețete</div>
+    <h2>Cum se prepară leacurile</h2>
+    <p class="lead">Cele mai multe rețete din carte folosesc câteva metode simple. Iată-le pe scurt:</p>
+    <div class="legend">
+      <div><b>Infuzie (ceai)</b><p>Torni apă fiartă peste plantă, acoperi și lași 5–10 minute. Pentru flori și frunze.</p></div>
+      <div><b>Decoct (fiertură)</b><p>Fierbi planta 10–15 minute. Pentru rădăcini, scoarțe și semințe tari.</p></div>
+      <div><b>Untdelemn de plante</b><p>Ții planta în ulei de măsline 2–3 săptămâni, la căldură blândă. Pentru piele.</p></div>
+      <div><b>Tinctură</b><p>Ții planta în alcool alimentar 2–4 săptămâni, apoi strecori. Se ia în picături.</p></div>
+      <div><b>Alifie</b><p>Untdelemn de plante încălzit cu puțină ceară de albine, până se leagă.</p></div>
+      <div><b>Cataplasmă</b><p>Planta zdrobită (sau fiartă) pusă pe o pânză și așezată pe piele.</p></div>
+    </div>
+  </section>
+</div>
+
+<!-- TOC -->
+<div class="wrap">
+  <section id="cuprins">
+    <div class="toc">
+      <h3>Cuprins — 30 de leacuri</h3>
+      <div class="grp">Ungere, piele și răni</div>
+      <ol>
+        <li><a href="#leac-1">Untdelemnul de măsline</a></li>
+        <li><a href="#leac-2">Smirna</a></li>
+        <li><a href="#leac-3">Aloea</a></li>
+        <li><a href="#leac-4">Tămâia (boswellia)</a></li>
+        <li><a href="#leac-5">Nardul</a></li>
+        <li><a href="#leac-6">Balsamul de Galaad</a></li>
+      </ol>
+      <div class="grp">Curățire, respirație și răceli</div>
+      <ol start="7">
+        <li><a href="#leac-7">Isopul</a></li>
+        <li><a href="#leac-8">Mierea</a></li>
+        <li><a href="#leac-9">Muștarul</a></li>
+        <li><a href="#leac-10">Cedrul de Liban</a></li>
+        <li><a href="#leac-11">Smochinele (cataplasmă)</a></li>
+      </ol>
+      <div class="grp">Digestie și stomac</div>
+      <ol start="12">
+        <li><a href="#leac-12">Menta</a></li>
+        <li><a href="#leac-13">Mărarul</a></li>
+        <li><a href="#leac-14">Chimenul</a></li>
+        <li><a href="#leac-15">Coriandrul</a></li>
+        <li><a href="#leac-16">Vinul, cu măsură</a></li>
+        <li><a href="#leac-17">Oțetul</a></li>
+      </ol>
+      <div class="grp">Putere, inimă și energie</div>
+      <ol start="18">
+        <li><a href="#leac-18">Rodia</a></li>
+        <li><a href="#leac-19">Curmalele</a></li>
+        <li><a href="#leac-20">Strugurii și stafidele</a></li>
+        <li><a href="#leac-21">Grâul</a></li>
+        <li><a href="#leac-22">Orzul</a></li>
+        <li><a href="#leac-23">Susanul</a></li>
+      </ol>
+      <div class="grp">Liniște, somn și mirodenii sfinte</div>
+      <ol start="24">
+        <li><a href="#leac-24">Scorțișoara</a></li>
+        <li><a href="#leac-25">Casia</a></li>
+        <li><a href="#leac-26">Trestia mirositoare</a></li>
+        <li><a href="#leac-27">Șofranul</a></li>
+        <li><a href="#leac-28">Frunzele de măslin</a></li>
+      </ol>
+      <div class="grp">Bucătăria lui Israel</div>
+      <ol start="29">
+        <li><a href="#leac-29">Usturoiul</a></li>
+        <li><a href="#leac-30">Ceapa și prazul</a></li>
+      </ol>
+    </div>
+  </section>
+</div>
+
+<!-- ============ GROUP A ============ -->
+<div class="wrap">
+  <div class="grp-head"><div class="rule"></div><span class="eyebrow">Partea I</span><h3>Ungere, piele și răni</h3></div>
+
+  <article class="leac" id="leac-1">
+    <div class="num">Leacul 1</div>
+    <h2>Untdelemnul de măsline</h2>
+    <p class="verset">„…a legat rănile lui și a turnat pe ele untdelemn și vin.” — Luca 10:34</p>
+    <p>În pilda samariteanului milostiv, untdelemnul de măsline este chiar leacul cu care sunt îngrijite rănile. În toată Scriptura, el unge, hrănește și tămăduiește. Sfântul Iacov îndeamnă: „să-l ungă cu untdelemn” (Iacov 5:14).</p>
+    <h4>Ingrediente</h4>
+    <ul><li>Untdelemn de măsline extravirgin, curat</li></ul>
+    <h4>Preparare & folosire</h4>
+    <ul>
+      <li><b>Pentru piele uscată și mâini crăpate:</b> masează seara câteva picături pe zona uscată.</li>
+      <li><b>Pentru digestie:</b> o linguriță dimineața, pe stomacul gol, ajută ficatul și tranzitul.</li>
+      <li><b>Bază pentru alifii:</b> este uleiul în care se pun celelalte plante din carte.</li>
+    </ul>
+    <div class="atentie"><b>Atenție:</b> alege ulei de calitate, presat la rece. Cantitatea internă: o linguriță pe zi este de ajuns.</div>
+  </article>
+
+  <article class="leac" id="leac-2">
+    <div class="num">Leacul 2</div>
+    <h2>Smirna</h2>
+    <p class="verset">„…I-au adus daruri: aur, tămâie și smirnă.” — Matei 2:11</p>
+    <p>Smirna, darul magilor, era prețuită încă din vechime pentru puterea ei de a curăța rănile și de a păstra. La îngroparea Domnului, Nicodim a adus „un amestec de smirnă și aloe” (Ioan 19:39).</p>
+    <h4>Ingrediente</h4>
+    <ul><li>Tinctură de smirnă (din plafar) sau smirnă pudră</li><li>Apă caldă</li></ul>
+    <h4>Preparare & folosire</h4>
+    <ul>
+      <li><b>Gargară pentru gât și gingii:</b> 5–10 picături de tinctură într-un pahar cu apă caldă, se face gargară de 1–2 ori pe zi.</li>
+      <li><b>Pentru piele:</b> tinctura diluată se atinge pe zone iritate, cu o bucată de vată.</li>
+    </ul>
+    <div class="atentie"><b>Atenție:</b> numai extern și pentru gargară — nu se înghite. A nu se folosi în sarcină.</div>
+  </article>
+
+  <article class="leac" id="leac-3">
+    <div class="num">Leacul 3</div>
+    <h2>Aloea</h2>
+    <p class="verset">„…un amestec de smirnă și aloe, ca la o sută de litri.” — Ioan 19:39</p>
+    <p>Aloea însoțește smirna la îngroparea Mântuitorului. Gelul din frunza ei groasă este unul dintre cele mai vechi leacuri pentru piele și arsuri ușoare.</p>
+    <h4>Ingrediente</h4>
+    <ul><li>O frunză de Aloe vera</li></ul>
+    <h4>Preparare & folosire</h4>
+    <ul>
+      <li><b>Piele, arsuri ușoare de soare, iritații:</b> taie frunza, scoate gelul limpede și întinde-l direct pe piele, de 2–3 ori pe zi.</li>
+      <li><b>Buze crăpate:</b> puțin gel seara.</li>
+    </ul>
+    <div class="atentie"><b>Atenție:</b> folosește doar gelul limpede, nu partea galbenă de sub coajă (este iritantă și laxativă). Fă întâi o probă pe o zonă mică de piele.</div>
+  </article>
+
+  <article class="leac" id="leac-4">
+    <div class="num">Leacul 4</div>
+    <h2>Tămâia (boswellia)</h2>
+    <p class="verset">„…aur, tămâie și smirnă.” — Matei 2:11</p>
+    <p>Tămâia, rășina copacului boswellia, nu era doar pentru rugăciune și mireasmă, ci și un vechi leac pentru încheieturi și inflamații.</p>
+    <h4>Ingrediente</h4>
+    <ul><li>Tămâie naturală (boswellia) — cristale sau capsule din plafar</li></ul>
+    <h4>Preparare & folosire</h4>
+    <ul>
+      <li><b>Pentru aer curat și respirație:</b> arde o bucată mică de tămâie în casă, mai ales în sezonul rece.</li>
+      <li><b>Pentru încheieturi:</b> boswellia din plafar se ia după indicațiile de pe cutie.</li>
+    </ul>
+    <div class="atentie"><b>Atenție:</b> pentru forma internă (capsule), respectă doza de pe ambalaj și întreabă medicul dacă iei alte tratamente.</div>
+  </article>
+
+  <article class="leac" id="leac-5">
+    <div class="num">Leacul 5</div>
+    <h2>Nardul</h2>
+    <p class="verset">„…un vas de alabastru cu mir de nard curat, de mare preț.” — Marcu 14:3</p>
+    <p>Cu nard, femeia din Betania a uns picioarele Domnului. Mireasma lui caldă liniștește și astăzi mintea și trupul obosit.</p>
+    <h4>Ingrediente</h4>
+    <ul><li>Ulei esențial de nard (sau lavandă, ca înlocuitor apropiat)</li><li>Untdelemn de măsline</li></ul>
+    <h4>Preparare & folosire</h4>
+    <ul>
+      <li><b>Ulei de masaj liniștitor:</b> 2–3 picături de ulei esențial la o lingură de untdelemn; masează cefa și umerii seara.</li>
+      <li><b>Pentru somn:</b> o picătură pe pernă.</li>
+    </ul>
+    <div class="atentie"><b>Atenție:</b> uleiurile esențiale se folosesc diluate, niciodată pure pe piele. A se evita în sarcină fără sfatul medicului.</div>
+  </article>
+
+  <article class="leac" id="leac-6">
+    <div class="num">Leacul 6</div>
+    <h2>Balsamul de Galaad</h2>
+    <p class="verset">„Nu este balsam în Galaad? Nu este acolo niciun doctor?” — Ieremia 8:22</p>
+    <p>Vestitul balsam de Galaad era o rășină alinătoare, căutată în toată lumea veche pentru răni și dureri. Astăzi, propolisul de la albine îi ține locul cel mai bine.</p>
+    <h4>Ingrediente</h4>
+    <ul><li>Tinctură de propolis (înlocuitorul de azi al balsamului)</li></ul>
+    <h4>Preparare & folosire</h4>
+    <ul>
+      <li><b>Răni mici, afte, gingii:</b> atinge locul cu tinctură diluată în puțină apă.</li>
+      <li><b>Gât iritat:</b> câteva picături în apă caldă, gargară.</li>
+    </ul>
+    <div class="atentie"><b>Atenție:</b> cine este alergic la produsele stupului (miere, propolis) să nu folosească. Fă întâi o probă mică.</div>
+  </article>
+</div>
+
+<!-- ============ GROUP B ============ -->
+<div class="wrap">
+  <div class="grp-head"><div class="rule"></div><span class="eyebrow">Partea a II-a</span><h3>Curățire, respirație și răceli</h3></div>
+
+  <article class="leac" id="leac-7">
+    <div class="num">Leacul 7</div>
+    <h2>Isopul</h2>
+    <p class="verset">„Stropește-mă cu isop și voi fi curat.” — Psalmul 51:7</p>
+    <p>Isopul este planta curățirii în toată Scriptura, de la Paște până la Cruce. Ceaiul lui ușurează respirația și pieptul încărcat.</p>
+    <h4>Ingrediente</h4>
+    <ul><li>1 linguriță de isop uscat</li><li>O cană de apă fiartă</li><li>Miere (după gust)</li></ul>
+    <h4>Preparare & folosire</h4>
+    <ul>
+      <li>Fă o infuzie: toarnă apa fiartă peste isop, acoperă 8 minute, strecoară.</li>
+      <li>Bea 1 cană pe zi, îndulcită cu miere, când ai pieptul încărcat sau tuse.</li>
+    </ul>
+    <div class="atentie"><b>Atenție:</b> folosește planta ca ceai, nu uleiul esențial de isop. A se evita în sarcină și de către cei cu epilepsie.</div>
+  </article>
+
+  <article class="leac" id="leac-8">
+    <div class="num">Leacul 8</div>
+    <h2>Mierea</h2>
+    <p class="verset">„Mănâncă miere, fiul meu, căci este bună.” — Proverbe 24:13</p>
+    <p>Lăudată în toată Biblia, mierea alină gâtul, potolește tusea și dă putere. Este poate cel mai dulce leac al lui Dumnezeu.</p>
+    <h4>Ingrediente</h4>
+    <ul><li>Miere naturală</li><li>Lămâie (opțional)</li></ul>
+    <h4>Preparare & folosire</h4>
+    <ul>
+      <li><b>Gât și tuse:</b> o linguriță de miere simplă, seara, sau într-o cană de apă călduță cu lămâie.</li>
+      <li><b>Energie:</b> o linguriță dimineața.</li>
+    </ul>
+    <div class="atentie"><b>Atenție:</b> nu se dă copiilor sub 1 an. Diabeticii — cu mare măsură și cu sfatul medicului. Apa să fie călduță, nu clocotită (căldura mare strică mierea).</div>
+  </article>
+
+  <article class="leac" id="leac-9">
+    <div class="num">Leacul 9</div>
+    <h2>Muștarul</h2>
+    <p class="verset">„Împărăția cerurilor este ca un grăunte de muștar.” — Matei 13:31</p>
+    <p>Grăuntele mic din pildă a fost dintotdeauna și un leac: cataplasma de muștar încălzește pieptul și spatele și ajută circulația.</p>
+    <h4>Ingrediente</h4>
+    <ul><li>2 linguri de făină de muștar</li><li>Făină de grâu și apă caldă</li><li>O pânză subțire</li></ul>
+    <h4>Preparare & folosire</h4>
+    <ul>
+      <li>Amestecă muștarul cu puțină făină și apă caldă până se face o pastă; întinde-o pe pânză.</li>
+      <li>Așază pânza (nu direct pe piele) pe piept sau spate <b>doar 5–10 minute</b>.</li>
+    </ul>
+    <div class="atentie"><b>Atenție:</b> muștarul arde pielea. Nu-l pune direct, nu-l ține mult și nu-l folosi la copii mici, la piele sensibilă sau pe răni.</div>
+  </article>
+
+  <article class="leac" id="leac-10">
+    <div class="num">Leacul 10</div>
+    <h2>Cedrul de Liban</h2>
+    <p class="verset">„Cel drept va crește ca cedrul din Liban.” — Psalmul 92:12</p>
+    <p>Cedrul, semnul puterii și al curăției, era folosit la curățiri (Levitic 14). Aroma lui limpezește aerul și ușurează respirația.</p>
+    <h4>Ingrediente</h4>
+    <ul><li>Ulei esențial de cedru (sau brad)</li><li>Un vas cu apă fierbinte</li></ul>
+    <h4>Preparare & folosire</h4>
+    <ul>
+      <li><b>Inhalație:</b> 2 picături într-un vas cu apă fierbinte; respiră aburul, cu un prosop pe cap, câteva minute.</li>
+      <li><b>Aer curat:</b> câteva picături într-un difuzor, în camera bolnavului.</li>
+    </ul>
+    <div class="atentie"><b>Atenție:</b> ține ochii închiși la inhalație. Nu se folosește la sugari și la astmatici fără sfatul medicului.</div>
+  </article>
+
+  <article class="leac" id="leac-11">
+    <div class="num">Leacul 11</div>
+    <h2>Smochinele (cataplasmă)</h2>
+    <p class="verset">„Să se ia o turtă de smochine… și regele se va vindeca.” — Isaia 38:21</p>
+    <p>Când regele Iezechia era bolnav de moarte, leacul a fost o turtă de smochine pusă pe bubă. Este poate cea mai limpede rețetă din toată Biblia.</p>
+    <h4>Ingrediente</h4>
+    <ul><li>2–3 smochine (uscate, înmuiate, sau proaspete)</li></ul>
+    <h4>Preparare & folosire</h4>
+    <ul>
+      <li>Zdrobește smochinele până se face o pastă moale.</li>
+      <li>Pune pasta pe o bubă, un furuncul sau o umflătură, acoperă cu o pânză curată și lasă 1–2 ore. Repetă zilnic.</li>
+      <li><b>Pentru constipație:</b> 2–3 smochine înmuiate peste noapte, mâncate dimineața.</li>
+    </ul>
+    <div class="atentie"><b>Atenție:</b> pentru răni deschise sau infecții care se întind, mergi la medic — cataplasma nu ține locul tratamentului.</div>
+  </article>
+</div>
+
+<!-- ============ GROUP C ============ -->
+<div class="wrap">
+  <div class="grp-head"><div class="rule"></div><span class="eyebrow">Partea a III-a</span><h3>Digestie și stomac</h3></div>
+
+  <article class="leac" id="leac-12">
+    <div class="num">Leacul 12</div>
+    <h2>Menta</h2>
+    <p class="verset">„…dați zeciuială din mentă, din mărar și din chimen.” — Matei 23:23</p>
+    <p>Menta era atât de prețuită încât se dădea zeciuială din ea. Ceaiul ei limpede este un prieten vechi al stomacului.</p>
+    <h4>Ingrediente</h4>
+    <ul><li>1 linguriță de mentă uscată (sau câteva frunze proaspete)</li><li>O cană de apă fiartă</li></ul>
+    <h4>Preparare & folosire</h4>
+    <ul>
+      <li>Infuzie de 7 minute, acoperită. Bea după masă, când ai balonare sau greutate în stomac.</li>
+      <li>1–2 căni pe zi.</li>
+    </ul>
+    <div class="atentie"><b>Atenție:</b> cine are reflux (arsuri) puternic poate să nu suporte menta — atunci alege mărarul sau chimenul.</div>
+  </article>
+
+  <article class="leac" id="leac-13">
+    <div class="num">Leacul 13</div>
+    <h2>Mărarul</h2>
+    <p class="verset">„…din mentă, din mărar și din chimen.” — Matei 23:23</p>
+    <p>Mărarul, pomenit alături de mentă, potolește gazele și colicile. Este leacul blând al burților încărcate.</p>
+    <h4>Ingrediente</h4>
+    <ul><li>1 linguriță de semințe de mărar</li><li>O cană de apă fiartă</li></ul>
+    <h4>Preparare & folosire</h4>
+    <ul>
+      <li>Zdrobește ușor semințele, fă o infuzie de 10 minute, strecoară.</li>
+      <li>Bea după mese grele; potrivit și pentru colici.</li>
+    </ul>
+    <div class="atentie"><b>Atenție:</b> pentru sugari, orice ceai se dă numai cu sfatul medicului pediatru.</div>
+  </article>
+
+  <article class="leac" id="leac-14">
+    <div class="num">Leacul 14</div>
+    <h2>Chimenul</h2>
+    <p class="verset">„…căci chimenul se bate cu nuiaua.” — Isaia 28:27</p>
+    <p>Chimenul (și rudele lui) apare la Isaia și în Evanghelii. Semințele lui trezesc pofta de mâncare și ușurează digestia.</p>
+    <h4>Ingrediente</h4>
+    <ul><li>1 linguriță de semințe de chimen</li><li>O cană de apă</li></ul>
+    <h4>Preparare & folosire</h4>
+    <ul>
+      <li>Fierbe semințele 5 minute, lasă încă 5, strecoară.</li>
+      <li>Bea o cană caldă înainte sau după masă, pentru digestie și balonare.</li>
+    </ul>
+    <div class="atentie"><b>Atenție:</b> în cantități mari poate scădea pofta la unele persoane — ține-te de o cană.</div>
+  </article>
+
+  <article class="leac" id="leac-15">
+    <div class="num">Leacul 15</div>
+    <h2>Coriandrul</h2>
+    <p class="verset">„Mana era ca sămânța de coriandru.” — Exod 16:31</p>
+    <p>Când Dumnezeu a hrănit poporul în pustie, mana semăna cu sămânța de coriandru. Aceeași sămânță liniștește stomacul și mintea.</p>
+    <h4>Ingrediente</h4>
+    <ul><li>1 linguriță de semințe de coriandru</li><li>O cană de apă fiartă</li></ul>
+    <h4>Preparare & folosire</h4>
+    <ul>
+      <li>Zdrobește semințele, fă o infuzie de 10 minute.</li>
+      <li>Bea după masă pentru digestie sau seara pentru liniștire.</li>
+    </ul>
+    <div class="atentie"><b>Atenție:</b> rar, poate da alergii la persoanele sensibile la plantele din familia țelinei.</div>
+  </article>
+
+  <article class="leac" id="leac-16">
+    <div class="num">Leacul 16</div>
+    <h2>Vinul, cu măsură</h2>
+    <p class="verset">„…folosește puțin vin, pentru stomacul tău.” — 1 Timotei 5:23</p>
+    <p>Sfântul Pavel îl sfătuiește pe Timotei să bea „puțin vin” pentru stomac. Cuvântul-cheie este <b>puțin</b>: măsura face din vin leac, nu povară.</p>
+    <h4>Folosire</h4>
+    <ul>
+      <li>Un pahar mic de vin roșu, la masă, poate ajuta digestia și inima — la cei cărora le este îngăduit.</li>
+      <li>Un vin fiert cu scorțișoară și cuișoare, iarna, încălzește la răceală (fără a exagera).</li>
+    </ul>
+    <div class="atentie"><b>Atenție mare:</b> nu este pentru toți. A se evita cu totul de către cei care nu au voie să bea, de către cei cu boli de ficat, cu tratamente medicamentoase, femei însărcinate sau cine a avut probleme cu alcoolul. „Puțin” înseamnă puțin.</div>
+  </article>
+
+  <article class="leac" id="leac-17">
+    <div class="num">Leacul 17</div>
+    <h2>Oțetul</h2>
+    <p class="verset">„…înmoaie-ți bucata în oțet.” — Rut 2:14</p>
+    <p>La secerișul lui Booz, Rut își muia pâinea în oțet — băutura răcoritoare a lucrătorilor. Oțetul, cu măsură, ajută digestia și gâtul.</p>
+    <h4>Ingrediente</h4>
+    <ul><li>1 linguriță de oțet de mere</li><li>Un pahar de apă</li><li>Miere (opțional)</li></ul>
+    <h4>Preparare & folosire</h4>
+    <ul>
+      <li><b>Digestie:</b> o linguriță de oțet de mere într-un pahar cu apă, înainte de masa grea.</li>
+      <li><b>Gât:</b> gargară cu apă caldă și puțin oțet.</li>
+    </ul>
+    <div class="atentie"><b>Atenție:</b> întotdeauna diluat, niciodată simplu. Poate irita stomacul (ulcer, reflux) și slăbi smalțul dinților — clătește gura după.</div>
+  </article>
+</div>
+
+<!-- ============ GROUP D ============ -->
+<div class="wrap">
+  <div class="grp-head"><div class="rule"></div><span class="eyebrow">Partea a IV-a</span><h3>Putere, inimă și energie</h3></div>
+
+  <article class="leac" id="leac-18">
+    <div class="num">Leacul 18</div>
+    <h2>Rodia</h2>
+    <p class="verset">„…o livadă de rodii, cu roade alese.” — Cântarea Cântărilor 4:13</p>
+    <p>Rodia, podoaba veșmintelor preoțești și a Templului, este plină de viață. Sucul ei hrănește inima și sângele.</p>
+    <h4>Ingrediente</h4>
+    <ul><li>O rodie coaptă (sau suc natural, fără zahăr)</li></ul>
+    <h4>Preparare & folosire</h4>
+    <ul>
+      <li>Bea un pahar mic de suc proaspăt de rodie, de câteva ori pe săptămână, pentru inimă și energie.</li>
+    </ul>
+    <div class="atentie"><b>Atenție:</b> sucul de rodie poate interacționa cu unele medicamente pentru tensiune și colesterol — întreabă medicul dacă iei astfel de tratamente.</div>
+  </article>
+
+  <article class="leac" id="leac-19">
+    <div class="num">Leacul 19</div>
+    <h2>Curmalele</h2>
+    <p class="verset">„Cel drept… crește ca finicul (palmierul).” — Psalmul 92:12</p>
+    <p>Fructul palmierului, curmala, era hrana de drum a celor din vremea Bibliei: dulce, hrănitoare, dătătoare de putere.</p>
+    <h4>Folosire</h4>
+    <ul>
+      <li><b>Energie:</b> 2–3 curmale la gustare, când ești obosit sau înainte de o muncă grea.</li>
+      <li><b>Tranzit:</b> câteva curmale înmuiate, dimineața.</li>
+    </ul>
+    <div class="atentie"><b>Atenție:</b> sunt foarte dulci — diabeticii și cei care țin cont de greutate să le mănânce cu măsură.</div>
+  </article>
+
+  <article class="leac" id="leac-20">
+    <div class="num">Leacul 20</div>
+    <h2>Strugurii și stafidele</h2>
+    <p class="verset">„…i-au dat… două turte de stafide, și și-a venit în fire.” — 1 Samuel 30:12</p>
+    <p>Un om sleit de puteri și-a venit în fire cu turte de stafide. Strugurii, proaspeți sau uscați, refac repede puterea.</p>
+    <h4>Folosire</h4>
+    <ul>
+      <li><b>Slăbiciune, oboseală:</b> o mână de stafide sau un ciorchine de struguri.</li>
+      <li>Bune și în terci de dimineață, pentru energie.</li>
+    </ul>
+    <div class="atentie"><b>Atenție:</b> zahăr natural mult — cu măsură la diabet.</div>
+  </article>
+
+  <article class="leac" id="leac-21">
+    <div class="num">Leacul 21</div>
+    <h2>Grâul</h2>
+    <p class="verset">„…dacă bobul de grâu… moare, aduce multă roadă.” — Ioan 12:24</p>
+    <p>Grâul, pâinea vieții, este temelia hranei în toată Scriptura. Germenii lui sunt plini de putere.</p>
+    <h4>Folosire</h4>
+    <ul>
+      <li><b>Putere și vitamine:</b> o lingură de germeni de grâu în terci, iaurt sau supă, zilnic.</li>
+      <li>Pâinea din grâu integral hrănește mai bine decât cea albă.</li>
+    </ul>
+    <div class="atentie"><b>Atenție:</b> cei cu intoleranță la gluten (boală celiacă) să-l evite.</div>
+  </article>
+
+  <article class="leac" id="leac-22">
+    <div class="num">Leacul 22</div>
+    <h2>Orzul</h2>
+    <p class="verset">„Este aici un băiat cu cinci pâini de orz.” — Ioan 6:9</p>
+    <p>Din cinci pâini de orz a hrănit Domnul mulțimea. Apa de orz este un vechi leac blând pentru rinichi și stomac.</p>
+    <h4>Ingrediente</h4>
+    <ul><li>4 linguri de orz</li><li>1 litru de apă</li><li>Lămâie și miere (opțional)</li></ul>
+    <h4>Preparare & folosire</h4>
+    <ul>
+      <li>Fierbe orzul în apă 25–30 de minute, strecoară.</li>
+      <li>Bea „apa de orz” călduță peste zi — ajută rinichii și liniștește stomacul.</li>
+    </ul>
+    <div class="atentie"><b>Atenție:</b> conține gluten. Bea suficientă apă pe zi când folosești leacuri pentru rinichi.</div>
+  </article>
+
+  <article class="leac" id="leac-23">
+    <div class="num">Leacul 23</div>
+    <h2>Susanul</h2>
+    <p class="verset">Din mirodeniile și semințele vremii biblice.</p>
+    <p>Uleiul de susan era prețuit în lumea veche pentru hrană și pentru piele. Este bogat și blând, potrivit pielii uscate.</p>
+    <h4>Ingrediente</h4>
+    <ul><li>Ulei de susan presat la rece</li></ul>
+    <h4>Preparare & folosire</h4>
+    <ul>
+      <li><b>Piele uscată, călcâie crăpate:</b> masează seara puțin ulei de susan.</li>
+      <li><b>Gură sănătoasă (obicei vechi):</b> clătește gura cu o linguriță de ulei câteva minute, apoi scuipă și clătește cu apă.</li>
+    </ul>
+    <div class="atentie"><b>Atenție:</b> cine este alergic la susan să nu-l folosească nici pe piele.</div>
+  </article>
+</div>
+
+<!-- ============ GROUP E ============ -->
+<div class="wrap">
+  <div class="grp-head"><div class="rule"></div><span class="eyebrow">Partea a V-a</span><h3>Liniște, somn și mirodenii sfinte</h3></div>
+
+  <article class="leac" id="leac-24">
+    <div class="num">Leacul 24</div>
+    <h2>Scorțișoara</h2>
+    <p class="verset">„…scorțișoară mirositoare… untdelemn sfânt pentru ungere.” — Exod 30:23-25</p>
+    <p>Scorțișoara intra în untdelemnul sfânt al ungerii. Caldă și dulce, ajută circulația și ține sub control pofta de dulce.</p>
+    <h4>Ingrediente</h4>
+    <ul><li>Un vârf de linguriță de scorțișoară</li><li>Ceai cald sau apă caldă cu miere</li></ul>
+    <h4>Preparare & folosire</h4>
+    <ul>
+      <li>Presară scorțișoară în ceai, terci sau apă caldă cu miere, dimineața.</li>
+      <li>Încălzește la răceală și ajută digestia dulciurilor.</li>
+    </ul>
+    <div class="atentie"><b>Atenție:</b> cu măsură (un vârf de linguriță pe zi). În cantități mari poate afecta ficatul și nu este potrivită în sarcină.</div>
+  </article>
+
+  <article class="leac" id="leac-25">
+    <div class="num">Leacul 25</div>
+    <h2>Casia</h2>
+    <p class="verset">„Toate veșmintele Tale miros a smirnă, aloe și casia.” — Psalmul 45:8</p>
+    <p>Casia, rudă apropiată a scorțișoarei, parfuma veșmintele împăraților. Are aceleași daruri calde pentru trup.</p>
+    <h4>Folosire</h4>
+    <ul>
+      <li>Folosește-o ca pe scorțișoară: un vârf în ceai sau în mâncare, pentru căldură și digestie.</li>
+      <li>Băț de casia fiert în lapte cald, seara, pentru liniște.</li>
+    </ul>
+    <div class="atentie"><b>Atenție:</b> casia conține mai multă cumarină decât scorțișoara de Ceylon — cu măsură, mai ales la ficat sensibil.</div>
+  </article>
+
+  <article class="leac" id="leac-26">
+    <div class="num">Leacul 26</div>
+    <h2>Trestia mirositoare</h2>
+    <p class="verset">„…trestie mirositoare… și casia.” — Exod 30:23-24</p>
+    <p>Trestia mirositoare (calamus) intra în untdelemnul sfânt. Astăzi o prețuim mai ales pentru mireasma ei, folosită cu grijă.</p>
+    <h4>Folosire</h4>
+    <ul>
+      <li><b>Aromatizare și liniștire:</b> pune rădăcina uscată într-un săculeț de pânză, în cameră sau în dulap.</li>
+      <li>O rădăcină în baie caldă, pentru relaxare.</li>
+    </ul>
+    <div class="atentie"><b>Atenție:</b> a NU se înghiți. Unele soiuri de calamus sunt toxice pentru consumul intern — folosește-o doar pentru mireasmă, extern.</div>
+  </article>
+
+  <article class="leac" id="leac-27">
+    <div class="num">Leacul 27</div>
+    <h2>Șofranul</h2>
+    <p class="verset">„…nard și șofran, trestie mirositoare și scorțișoară.” — Cântarea Cântărilor 4:14</p>
+    <p>Șofranul, cea mai scumpă mirodenie, apare printre plantele grădinii din Cântarea Cântărilor. Câteva fire aduc bună dispoziție și somn liniștit.</p>
+    <h4>Ingrediente</h4>
+    <ul><li>3–4 fire de șofran</li><li>O cană de lapte cald sau ceai</li><li>Miere</li></ul>
+    <h4>Preparare & folosire</h4>
+    <ul>
+      <li>Lasă firele de șofran în laptele cald 5 minute, îndulcește cu miere.</li>
+      <li>Bea seara, pentru stare bună și somn.</li>
+    </ul>
+    <div class="atentie"><b>Atenție:</b> foarte puțin este de ajuns. Cantitățile mari sunt dăunătoare și a se evita în sarcină.</div>
+  </article>
+
+  <article class="leac" id="leac-28">
+    <div class="num">Leacul 28</div>
+    <h2>Frunzele de măslin</h2>
+    <p class="verset">„…porumbelul… avea în cioc o frunză de măslin ruptă.” — Facere 8:11</p>
+    <p>Frunza de măslin, semnul păcii adus lui Noe, este și un leac blând pentru tensiune și pentru puteri.</p>
+    <h4>Ingrediente</h4>
+    <ul><li>1 linguriță de frunze de măslin uscate</li><li>O cană de apă fiartă</li></ul>
+    <h4>Preparare & folosire</h4>
+    <ul>
+      <li>Infuzie de 10 minute, strecurată. Bea 1 cană pe zi, în cure de câteva săptămâni.</li>
+      <li>Sprijină tensiunea și imunitatea.</li>
+    </ul>
+    <div class="atentie"><b>Atenție:</b> dacă iei deja pastile pentru tensiune, vorbește cu medicul — frunza de măslin poate întări efectul lor.</div>
+  </article>
+</div>
+
+<!-- ============ GROUP F ============ -->
+<div class="wrap">
+  <div class="grp-head"><div class="rule"></div><span class="eyebrow">Partea a VI-a</span><h3>Bucătăria lui Israel</h3></div>
+
+  <article class="leac" id="leac-29">
+    <div class="num">Leacul 29</div>
+    <h2>Usturoiul</h2>
+    <p class="verset">„Ne aducem aminte de… usturoiul pe care-l mâncam în Egipt.” — Numeri 11:5</p>
+    <p>Poporul tânjea în pustie după usturoiul Egiptului. Nu degeaba: este unul dintre cele mai puternice leacuri pentru imunitate și circulație.</p>
+    <h4>Folosire</h4>
+    <ul>
+      <li><b>Imunitate, răceli:</b> un cățel de usturoi crud, zdrobit, în mâncare, zilnic în sezonul rece.</li>
+      <li><b>Circulație:</b> folosit des în bucătărie, sprijină inima și vasele.</li>
+    </ul>
+    <div class="atentie"><b>Atenție:</b> cine ia medicamente care subțiază sângele să nu exagereze și să întrebe medicul. Poate irita stomacul dacă e mâncat prea mult, pe nemâncate.</div>
+  </article>
+
+  <article class="leac" id="leac-30">
+    <div class="num">Leacul 30</div>
+    <h2>Ceapa și prazul</h2>
+    <p class="verset">„…prazul, cepele și usturoiul.” — Numeri 11:5</p>
+    <p>Alături de usturoi, ceapa și prazul erau hrana și leacul de zi cu zi. Siropul de ceapă este un leac vechi și de încredere pentru tuse.</p>
+    <h4>Ingrediente</h4>
+    <ul><li>1 ceapă</li><li>2 linguri de miere (sau zahăr)</li></ul>
+    <h4>Preparare & folosire</h4>
+    <ul>
+      <li>Taie ceapa felii, așaz-o în strat cu miere într-un borcan și lasă peste noapte.</li>
+      <li>Zeama (siropul) care se adună: 1 linguriță de câteva ori pe zi, pentru tuse și gât.</li>
+    </ul>
+    <div class="atentie"><b>Atenție:</b> siropul cu miere nu se dă copiilor sub 1 an. Ține borcanul la rece și fă sirop proaspăt la 1–2 zile.</div>
+  </article>
+</div>
+
+<!-- BONUS + CLOSING -->
+<div class="wrap">
+  <section id="rugaciune">
+    <div class="eyebrow">La sfârșit</div>
+    <h2>Rugăciune și leac</h2>
+    <p>Bătrânii nu luau niciun leac fără o rugăciune. Trupul se îngrijește cu plantele lui Dumnezeu, iar sufletul, cu credința. Înainte de a lua leacul, poți spune în tăcere:</p>
+    <p style="font-family:var(--serif);font-style:italic;color:var(--green);font-size:1.15rem">„Doamne, Cel ce ai pus tămăduire în plantele pământului, binecuvântează acest leac și dă sănătate trupului și liniște sufletului meu. Amin.”</p>
+  </section>
+
+  <section id="incheiere">
+    <div class="eyebrow">Încheiere</div>
+    <h2>Un cuvânt de rămas-bun</h2>
+    <p>Ai în mâini 30 de leacuri pe care oamenii credinței le-au folosit mii de ani. Ține-le aproape, folosește-le cu măsură și cu rugăciune, și amintește-ți mereu că cea mai mare farmacie este grădina lăsată de Dumnezeu.</p>
+    <p class="lead">Multă sănătate — trupului și sufletului tău.</p>
+    <p class="signature">— Italo Marques Fabris</p>
+    <p class="no-print"><button class="btn" onclick="window.print()">🖨️ Salvează / Tipărește cartea</button></p>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="fbrand">Farmacia Naturală Creștină</div>
+    <p style="color:var(--ink);font-weight:600">Autor: Italo Marques Fabris</p>
+    <p><b>Avertisment.</b> Această carte are scop educativ, cultural și de credință. Rețetele fac parte din tradiția biblică și populară și nu înlocuiesc consultul, diagnosticul sau tratamentul medical. Consultă întotdeauna un medic înainte de a folosi orice remediu, mai ales dacă urmezi un tratament, ești însărcinată, alăptezi sau ai o afecțiune cronică. Rezultatele pot varia de la o persoană la alta.</p>
+    <p>© 2026 Descoperă Biblia · Toate drepturile rezervate. Această carte este pentru uzul personal al cumpărătorului.</p>
+  </div>
+</footer>
+
+<button class="totop" id="totop" aria-label="Sus" title="Înapoi sus">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="margin:auto"><path d="M12 19V6M6 12l6-6 6 6" stroke="#F4EFDF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script>
+  var prog=document.getElementById('prog'), totop=document.getElementById('totop');
+  window.addEventListener('scroll',function(){
+    var h=document.documentElement, sc=h.scrollTop, max=h.scrollHeight-h.clientHeight;
+    prog.style.width=(max>0?(sc/max*100):0)+'%';
+    if(sc>600){totop.classList.add('show');}else{totop.classList.remove('show');}
+  },{passive:true});
+  totop.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+</script>
+</body>
+</html>
